@@ -1228,6 +1228,7 @@
     .screen-card:nth-child(4) { display: none; }
   }
 </style>
+<script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
 
@@ -1240,7 +1241,12 @@
     <li><a href="#preview">Preview</a></li>
     <li><a href="#why">Why Us</a></li>
   </ul>
-  <a href="https://tally.so/r/68kpje" class="nav-cta">Get Early Access</a>
+  <a href="#"
+   class="nav-cta"
+   data-tally-open="68kpje"
+   data-tally-overlay="1">
+  Get Early Access
+</a>
 </nav>
 
 
@@ -1253,7 +1259,12 @@
     </h1>
     <p class="hero-sub">Log your workouts, track your meals, and earn XP for every action. Compete in weekly leagues where the top players promote — and the rest get relegated. One app. One daily score. Something worth coming back to.</p>
     <div class="hero-actions">
-      <a href="https://tally.so/r/68kpje" class="btn-primary">Get Early Access</a>
+      <a href="#"
+   class="btn-primary"
+   data-tally-open="68kpje"
+   data-tally-overlay="1">
+  Get Early Access
+</a>
       <a href="#how" class="btn-secondary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
         See How It Works
@@ -1718,10 +1729,14 @@
     <span class="cta-perk">Influence Features</span>
   </div>
 
-  <div class="waitlist-form fade-up">
-    <input type="email" class="waitlist-input" placeholder="your@email.com">
-    <button class="btn-primary" onclick="handleWaitlist(this)">Request Access</button>
-  </div>
+ <div class="waitlist-form fade-up" style="justify-content:center;">
+  <a href="#"
+     class="btn-primary"
+     data-tally-open="68kpje"
+     data-tally-overlay="1">
+    Request Access
+  </a>
+</div>
 
   <p class="cta-note fade-up">No spam. Unsubscribe any time. We'll reach out when access opens.</p>
 </section>
@@ -1767,24 +1782,6 @@
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Waitlist form handler
-  function handleWaitlist(btn) {
-    const input = btn.previousElementSibling;
-    const email = input.value.trim();
-
-    if (!email || !email.includes('@')) {
-      input.style.borderColor = '#FF5050';
-      setTimeout(() => input.style.borderColor = '', 2000);
-      return;
-    }
-
-    btn.textContent = "You're on the list ✓";
-    btn.style.background = '#2ECC71';
-    btn.style.boxShadow = '0 0 30px rgba(46,204,113,0.3)';
-    input.value = '';
-    input.placeholder = "We'll be in touch when access opens.";
-    btn.disabled = true;
-  }
 
   // Smooth scroll for nav links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
